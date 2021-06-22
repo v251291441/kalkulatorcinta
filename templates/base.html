@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Kalkulator Cinta</title>
+    <link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
+    <meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
+    <meta name="author" content="FREEHTML5.CO" />
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:card" content="" />
+
+    <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet'
+        type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="static/css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="static/css/icomoon.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="static/css/bootstrap.css">
+
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="static/css/magnific-popup.css">
+
+    <!-- Owl Carousel  -->
+    <link rel="stylesheet" href="static/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="static/css/owl.theme.default.min.css">
+
+    <!-- Theme style  -->
+    <link rel="stylesheet" href="static/css/style.css">
+
+    <!-- Modernizr JS -->
+    <script src="static/js/modernizr-2.6.2.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+	<script src="static/js/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+
+<body>
+
+    <div class="fh5co-loader"></div>
+
+    <div id="page">
+        <nav class="fh5co-nav" role="navigation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-2">
+                        <div id="fh5co-logo"><a href="/">Love<strong>.</strong></a></div>
+                    </div>
+                    <div class="col-xs-10 text-right menu-1">
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/history">Hall of Fame</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+
+        {% block content %} {% endblock %}
+
+        <div id="fh5co-couple" class="fh5co-section-gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+                        <h2>Hitung Kecocokan Kalian</h2>
+                        <h3>Selamat Datang di Aplikasi Kalkulator Cinta</h3>
+                        <p>Silakan isi nama dan tanggal lahir kamu serta pasangan kamu<br>untuk menghitung tingkat
+                            kecocokan kalian</p>
+                    </div>
+                </div>
+                <form method="post">
+                    <div class="couple-wrap animate-box">
+                        <div class="couple-half">
+                            <div class="groom">
+                                <img src="static/images/groom.jpg" alt="groom" class="img-responsive">
+                            </div>
+                            <div class="desc-groom">
+                                <input type="text" id="fnamacowok" name="namacowok" class="form-control"
+                                    placeholder="Nama Lengkap Cowok" value="{{ request.form['namacowok'] }}" required>
+                                <br>
+                                <input type="date" id="ftanggalcowok" name="tanggalcowok" class="form-control"
+                                    placeholder="Tanggal Lahir Cowok" value="{{ request.form['tanggalcowok'] }}"
+                                    required>
+                            </div>
+                        </div>
+                        <p class="heart text-center"><i class="icon-heart2"></i></p>
+                        <div class="couple-half">
+                            <div class="bride">
+                                <img src="static/images/bride.jpg" alt="groom" class="img-responsive">
+                            </div>
+                            <div class="desc-bride">
+                                <input type="text" id="fnamacewek" name="namacewek" class="form-control"
+                                    placeholder="Nama Lengkap Cewek" value="{{ request.form['namacewek'] }}" required>
+                                <br>
+                                <input type="date" id="ftanggalcewek" name="tanggalcewek" class="form-control"
+                                    placeholder="Tanggal Lahir Cewek" value="{{ request.form['tanggalcewek'] }}"
+                                    required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2 text-center animate-box">
+                            <br>
+                            <button type="submit" class="btn btn-primary">Hitung !</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <footer id="fh5co-footer" role="contentinfo">
+            <div class="container">
+
+                <div class="row copyright">
+                    <div class="col-md-12 text-center">
+                        <p>
+                            <small class="block">&copy; 2021 Kalkulator Cinta. All Rights Reserved.</small>
+                            <small class="block">Template dari <a href="http://freehtml5.co/"
+                                    target="_blank">FREEHTML5.co</a> Sumber Gambar: <a href="http://unsplash.co/"
+                                    target="_blank">Unsplash</a></small>
+                        </p>
+                        <p>
+                        <ul class="fh5co-social-icons">
+                            <li><a href="#"><i class="icon-heart2"></i></a></li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>
+
+    <div class="gototop js-top">
+        <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+    </div>
+
+    <!-- jQuery -->
+    <script src="static/js/jquery.min.js"></script>
+    <!-- jQuery Easing -->
+    <script src="static/js/jquery.easing.1.3.js"></script>
+    <!-- Bootstrap -->
+    <script src="static/js/bootstrap.min.js"></script>
+    <!-- Waypoints -->
+    <script src="static/js/jquery.waypoints.min.js"></script>
+    <!-- Carousel -->
+    <script src="static/js/owl.carousel.min.js"></script>
+    <!-- countTo -->
+    <script src="static/js/jquery.countTo.js"></script>
+
+    <!-- Stellar -->
+    <script src="static/js/jquery.stellar.min.js"></script>
+    <!-- Magnific Popup -->
+    <script src="static/js/jquery.magnific-popup.min.js"></script>
+    <script src="static/js/magnific-popup-options.js"></script>
+
+    <!-- // <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script> -->
+    <script src="static/js/simplyCountdown.js"></script>
+    <!-- Main -->
+    <script src="static/js/main.js"></script>
+
+    <script>
+        var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);
+
+        // default example
+        simplyCountdown('.simply-countdown-one', {
+            year: d.getFullYear(),
+            month: d.getMonth() + 1,
+            day: d.getDate()
+        });
+
+        //jQuery example
+        $('#simply-countdown-losange').simplyCountdown({
+            year: d.getFullYear(),
+            month: d.getMonth() + 1,
+            day: d.getDate(),
+            enableUtc: false
+        });
+    </script>
+
+
+</body>
+
+</html>
